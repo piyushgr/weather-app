@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body style="background-color: white;">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Weather App</a>
+                </ul>
+                        <input id="inbox" style="border: 2px solid gainsboro; border-radius: 0.5vw; width:30vw"type="search" placeholder=" Search" aria-label="Search">
+                       <button id="btn" style="border: 2px solid gainsboro; border-radius: 0.4vw; " >Button</button>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <main style="padding-top: 5vh;">
+        <h2 class="display-6 text-center mb-4">Weather For  &nbsp;<span id="cityname"></span></h2>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm" style="background-color: white;">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Humidity Info</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title"><span id="humid"></span><small class="text-muted fw-light">%</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li> &nbsp; SunRise &nbsp;<span id="sunrise"></span><small class="text-muted fw-light"></small></li>
+                            <li>SunSet &nbsp;<span id="sunset"></span><small class="text-muted fw-light"></small></li>
+                            <!-- <li> <span id="sunrise"></span></li> -->
+                        </ul>
+                        <!-- <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm "style="background-color: white;"">
+                    <div class="card-header py-3 ">
+                        <h4 class="my-0 fw-normal">Temperatures</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title"><span id="temperatureval"></span><small class="text-muted fw-light">°C</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                           <!-- <li>Feels Like &nbsp;<span id="feelslike"></span><small class="text-muted fw-light">°C</small></li> -->
+                           <li>Max Temperature &nbsp;<span id="maxtemp"></span><small class="text-muted fw-light">°C</small></li>
+                           <li>Min Temperature &nbsp;<span id="mintemp"></span><small class="text-muted fw-light">°C</small></li>
+                        </ul>
+                        <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm" style="background-color:white;">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Wind Info</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title"><span id="windspeed"></span><small class="text-muted fw-light">km/h</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                        <li>Wind Degrees &nbsp;<span id="winddegree"></span><small class="text-muted fw-light">°</small></li>
+                        <li>Cloud Pct &nbsp;<span id="cloudprct"></span><small class="text-muted fw-light">%</small></li>
+                        <!-- <li>Min Temperature &nbsp;<span id="mintemp"></span></li> -->
+                        </ul>
+                        <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <h2 class="display-6 text-center mb-4">Other Cities</h2>    
+        <div class="table-responsive">
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th style="width: 34%;"></th>
+                        <th style="width: 34%;">Temperature</th>
+                        <th style="width: 22%;">Humidity</th>
+                        <th style="width: 22%;">Wind</th>    
+                    </tr>
+                </thead>
+                <tbody>
+                  
+                    <tr>
+                        <th scope="row" class="text-start">Delhi</th>
+                        <td><span style="font-size: 0.9rem;" id="deltemp"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">°C</small></use>
+                            </svg></td>
+                        <td><span style="font-size: 0.9rem;" id="delmax"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">%</small></use>
+                            </svg></td>
+                        <td><span style="font-size: 0.9rem;" id="delmin"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">km/h</small></use>
+                            </svg></td>
+           
+                    </tr>                    
+                    <tr>
+                        <th scope="row" class="text-start">Mumbai</th>
+                        <td><span style="font-size: 0.9rem;" id="mumbtemp"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">°C</small></use>
+                            </svg></td>
+                        <td><span style="font-size: 0.9rem;" id="mumbmax"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">%</small></use>
+                            </svg></td>
+                        <td><span style="font-size: 0.9rem;" id="mumbmin"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">km/h</small></use>
+                            </svg></td>
+           
+                    </tr>                    
+                    <tr>
+                        <th scope="row" class="text-start">Bangalore</th>
+                        <td><span style="font-size: 0.9rem;" id="bangtemp"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">°C</small></use>
+                            </svg></td>
+                        <td><span style="font-size: 0.9rem;" id="bangmax"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">%</small></use>
+                            </svg></td>
+                        <td><span style="font-size: 0.9rem;" id="bangmin"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">km/h</small></use>
+                            </svg></td>
+           
+                    </tr>                    
+                    <tr>
+                        <th scope="row" class="text-start">Lucknow</th>
+                        <td><span style="font-size: 0.9rem;" id="lucktemp"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">°C</small></use>
+                            </svg></td>
+                        <td><span style="font-size: 0.9rem;" id="luckmax"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">%</small></use>
+                            </svg></td>
+                        <td><span style="font-size: 0.9rem;" id="luckmin"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">km/h</small></use>
+                            </svg></td>
+           
+                    </tr>                    
+                    <tr>
+                        <th scope="row" class="text-start">Kolkata</th>
+                        <td><span style="font-size: 0.9rem;" id="koltemp"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">°C</small></use>
+                            </svg></td>
+                        <td><span style="font-size: 0.9rem;" id="kolmax"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">%</small></use>
+                            </svg></td>
+                        <td><span style="font-size: 0.9rem;" id="kolmin"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">km/h</small></use>
+                            </svg></td>
+           
+                    </tr>                    
+                    <tr>
+                        <th scope="row" class="text-start">Paris</th>
+                        <td><span style="font-size: 0.9rem;" id="partemp"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">°C</small></use>
+                            </svg></td>
+                        <td><span style="font-size: 0.9rem;" id="parmax"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">%</small></use>
+                            </svg></td>
+                        <td><span style="font-size: 0.9rem;" id="parmin"></span><svg class="bi" width="1" height="10">
+                                <use xlink:href="#check"><small class="text-muted fw-light">km/h</small></use>
+                            </svg></td>
+           
+                    </tr>                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

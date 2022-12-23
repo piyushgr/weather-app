@@ -1,0 +1,14 @@
+body{
+    overflow-x: hidden;
+}
+#btn:hover{
+    background-color: rgb(157, 158, 160);
+}
+@media screen and (min-width:900px){
+    #btn{
+        margin-right: 4vw;
+    }
+    #inbox{
+        margin-left: 40vw;
+    }
+}
