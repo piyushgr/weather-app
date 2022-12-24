@@ -1,10 +1,11 @@
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'a318a1f93fmsh9be8c39503b0a47p16dd60jsn4e4449129620',
+		'X-RapidAPI-Key': '8faaa19ca0msh3b01b52ea11a27ep1443f3jsndb6df036aafd',
 		'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
 	}
 };
+
 let submit=document.getElementById("submit");
 let inbox=document.getElementById("inbox");
 let humid=document.getElementById("humid");
