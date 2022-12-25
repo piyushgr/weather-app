@@ -61,7 +61,8 @@ const getWeather=(city)=>{
 }
 btn.addEventListener("click",(e)=>{
 	console.log("pressed");
-	if(inbox.value==undefined)
+	console.log(inbox.value);
+	if(inbox.value.length==0)
 	inbox.value="Delhi";
 	getWeather(inbox.value);
 })
