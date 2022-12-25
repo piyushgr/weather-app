@@ -20,6 +20,26 @@ let sunrise=document.getElementById("sunrise");
 let sunset=document.getElementById("sunset");
 let btn=document.getElementById("btn");
 
+cityname.innerHTML="New York";
+	fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=New York', options)
+		.then(response => response.json())
+		.then(response =>{ console.log(response);
+			cityname.innerHTML="New York";
+			humid.innerHTML=response.humidity;
+			temperatureval.innerText=response.temp;
+			windspeed.innerText=response.wind_speed;
+			winddegree.innerText=response.wind_degrees;
+			cloudprct.innerText=response.cloud_pct;
+			maxtemp.innerText=response.max_temp;
+			mintemp.innerText=response.min_temp;
+			sunrise.innerText=response.sunrise;
+			sunset.innerText=response.sunset;
+		})
+		.catch(err => console.error(err));
+
+
+
+
 
 const getWeather=(city)=>{
 	// fetch("https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Mathura", options)
@@ -41,6 +61,8 @@ const getWeather=(city)=>{
 }
 btn.addEventListener("click",(e)=>{
 	console.log("pressed");
+	if(inbox.value==undefined)
+	inbox.value="Delhi";
 	getWeather(inbox.value);
 })
 
