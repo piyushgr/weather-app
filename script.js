@@ -1,7 +1,8 @@
+const API_KEY=colorCodes.value;
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'CREATE_YOUR_OWN_API_KEY_ON_RAPID-API_AND_ENTER_HERE',
+		'X-RapidAPI-Key': API_KEY,
 		'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
 	}
 };

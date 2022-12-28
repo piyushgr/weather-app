@@ -1,1 +1,2 @@
-Before running in local host or any other platform please create your own RAPID API KEY and replace 'CREATE_YOUR_OWN_API_KEY_ON_RAPID-API_AND_ENTER_HERE' with '{YOUR API KEY}' in the line no 4 in script.js file.
+Before running in local host or any other platform please create your own RAPID API KEY and replace
+{API_KEY } with your own RAPID API key.
